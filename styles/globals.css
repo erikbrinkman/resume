@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Lato&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body, html, #__next {
+    height: 100%;
+  }
+}
+
+/* tailwind customizations */
+@layer utilities {
+  .overflow-x-clip {
+    overflow-x: clip;
+  }
+  .overflow-y-clip {
+    overflow-y: clip;
+  }
+
+  .flex-grow-phi {
+    flex-grow: 1.618
+  }
+}
+
+/* set printing size */
+@page {
+  margin: 0 0 0 0;
+}
+
+/* for color printing */
+@media print {
+  :root {
+    -webkit-print-color-adjust:exact;
+    color-adjust: exact;
+  }
+}

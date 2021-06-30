@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16.817982mm"
+   height="11.99926mm"
+   viewBox="0 0 16.817982 11.99926"
+   version="1.1"
+   id="svg65557"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Upwork-logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview65559"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.63250561"
+     inkscape:cx="-353.35655"
+     inkscape:cy="151.77731"
+     inkscape:window-width="1500"
+     inkscape:window-height="938"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs65554" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-161.0065,-108.19896)">
+    <path
+       d="m 174.01054,109.21619 c -1.80226,0.008 -3.17279,1.20107 -3.68555,3.1009 -0.86039,-1.32435 -1.53172,-2.83907 -1.91683,-4.11813 l -1.89723,0.008 0.0235,5.02864 a 1.8035649,1.8035649 0 0 1 -1.79442,1.81139 1.8035649,1.8035649 0 0 1 -1.81141,-1.79441 l -0.024,-5.02863 -1.8981,0.008 0.0235,5.02865 c 0.01,2.08672 1.67723,3.74043 3.71778,3.73039 2.04057,-0.009 3.6934,-1.67809 3.68382,-3.76525 l -0.004,-0.85386 c 0.38249,0.75671 0.86083,1.5609 1.38665,2.27056 l -1.16012,5.55578 1.94471,-0.008 0.83644,-4.03667 c 0.76107,0.47137 1.61188,0.75149 2.61212,0.7467 2.0876,-0.009 3.78792,-1.72515 3.77703,-3.90772 a 3.8075258,3.8075258 0 0 0 -3.81319,-3.77746 z m 0.027,5.74049 c -0.75889,0.003 -1.51909,-0.325 -2.13814,-0.84429 l 0.18602,-0.75933 v -0.0436 c 0.13941,-0.80768 0.5585,-2.18519 1.98218,-2.1913 a 1.903763,1.903763 0 0 1 1.90681,1.88373 c -0.0427,1.09129 -0.93968,1.9495 -1.93644,1.95429 z"
+       fill="#6fda44"
+       id="path2863"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.435643" />
+  </g>
+</svg>
