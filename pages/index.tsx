@@ -1,279 +1,128 @@
-import Head from "next/head";
-import { ReactElement, HTMLAttributes, PropsWithChildren } from "react";
-import logo from "../public/logo.svg";
-import washu from "../public/washu-logo.svg";
-import apl from "../public/apl-logo.svg";
-import ll from "../public/lincoln-lab-logo.svg";
-import umich from "../public/umich-logo.svg";
-import upwork from "../public/upwork-logo.svg";
-import yelp from "../public/yelp-logo.svg";
-import fb from "../public/fb-logo.svg";
-import {
-  MdSchool,
-  MdWhatshot,
-  MdAccountCircle,
-  MdComputer,
-  MdLibraryBooks,
-} from "react-icons/md";
+import { ReactElement } from "react";
+import Experience from "../components/experience";
+import Footing from "../components/footing";
+import Heading from "../components/heading";
+import HeadingSpacer from "../components/heading-spacer";
+import LevelSkills from "../components/level-skills";
+import Publication from "../components/publication";
+import School from "../components/school";
+import Section from "../components/section";
 
-// FIXME move these into components
-function Header({
-  text,
-  icon,
-  className = "",
-  ...rest
-}: {
-  text: string;
-  icon?: ReactElement;
-} & HTMLAttributes<HTMLHeadingElement>): ReactElement {
-  // FIXME maybe shift icons to the left into margin?
-  return (
-    <h2 className={`${className} flex text-3xl font-title space-x-2 font-bold`} {...rest}>
-      {/*FIXME icon*/}
-      <div>{text}</div>
-    </h2>
-  );
-}
-
-function Section({
-  icon,
-  title,
-  children,
-}: PropsWithChildren<{ icon: ReactElement; title: string }>): ReactElement {
-  return (
-    <div className="space-y-1">
-      <Header icon={icon} text={title} />
-      {children}
-    </div>
-  );
-}
-
-function Publication({
-  title,
-  authors,
-  conference,
-}: {
-  title: string;
-  authors: string[];
-  conference: string;
-}): ReactElement {
-  // FIXME Links to publications
-  return (
-    <div>
-      <div className="text-lg text-justify">{title}</div>
-      <div className="w-full flex justify-between">
-        <div className="">{authors.join(", ")}</div>
-        <div>{conference}</div>
-      </div>
-    </div>
-  );
-}
-
-function School({
-  name,
-  years,
-  degree,
-  gpa,
-  children,
-}: PropsWithChildren<{
-  name: string;
-  years: string;
-  degree: string;
-  gpa: number;
-}>): ReactElement {
-  const fgpa = gpa.toLocaleString(undefined, { minimumFractionDigits: 2 });
-  return (
-    <div>
-      <div className="flex justify-between w-full items-baseline">
-        <div className="text-lg">{name}</div>
-        <div>{years}</div>
-      </div>
-        <div>{degree}</div>
-        {/*FIXME <div>{`GPA: ${fgpa}`}</div>*/}
-      {children}
-    </div>
-  );
-}
-
-// FIXME add appropriate hover styles so it looks good on web
-// FIXME add yarn optimized images to inline svgs
-
-function AffiliationLogo({
-  img,
-  alt,
-  href,
-}: {
-  img: { src: string };
-  alt: string;
-  href: string;
-}): ReactElement {
-  return (
-    <a href={href} target="_blank" rel="noreferrer">
-      <img className="h-full" src={img.src} alt={alt} />
-    </a>
-  );
-}
-
-// FIXME remove any and all indline styles
-// FIXME make responsive, there is an xs breakpoint for phones
 export default function Resume(): ReactElement {
   return (
-    <div className="overflow-hidden w-full min-h-full overflow-y-clip">
-      <div
-        className="max-w-3xl mx-auto w-full print:max-w-none print:h-screen relative"
-        style={{ maxWidth: "8.5in", height: "11in" }}
-      >
-        {/* FIXME figure out rotation angle, and then size as a result */}
-        <div className="absolute bg-purple-200 origin-bottom-left transform -translate-y-full rotate-12 w-mask h-mask" />
-        {/* FIXME print margins */}
-        <div className="p-4 h-full" style={{ padding: "0.7cm 1cm" }}>
-          <div className="relative z-10 h-full">
-            <div className="absolute top-0 right-0 flex flex-col items-end font-title">
-              {/* FIXME add logo links and adjust sizes */}
-              <div className="flex space-x-4 justify-between items-baseline">
-                <div>
-                  <img className="h-9" src={logo.src} alt="logo" />
-                </div>
-                <h1 className="text-5xl font-bold">Erik Brinkman</h1>
+    <div className="overflow-hidden w-full min-h-screen no-page-margin">
+      <div className="max-w-3xl mx-auto w-full min-h-screen print:h-screen relative print:max-w-none">
+        <Heading />
+        <div className="w-full min-h-screen print:h-screen flex flex-col md:flex-row print:flex-row">
+          <div className="flex flex-col justify-between p-6 pb-4 md:pt-10 print:pt-10 md:pb-40 print:pb-[21.25565616700221vw] space-y-4 print:space-y-2">
+            <Section title="Summary">
+              {/* NOTE hacky adjustments to get float to still wrap text at an angle */}
+              <div className="-mt-[4.5rem]">
+                <HeadingSpacer />
               </div>
-              <div>
-                <a href="mailto:erik.brinkman@gmail.com">
-                  erik.brinkman@gmail.com
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://erikbrinkman.github.io"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  erikbrinkman.github.io
-                </a>
-              </div>
-              <div className="flex">
-                {/* FIXME fix these fonts so they're "close" */}
-                {/*
-                <div>/ˈɛrɪk/</div>
-                <div>he/him</div>
-                  */}
-              </div>
-            </div>
-            <div className="flex flex-col w-full h-full md:flex-row md:space-x-8 print:flex-row print:space-x-8">
-              {/* FIXME change these to justify-between so that we fill all remaining space */}
-              <div className="flex flex-col flex-1 flex-grow-phi justify-between space-y-8 mt-4 md:mb-40 print:mb-40">
-                <Section icon={<MdAccountCircle />} title="Summary">
-                  {/* this float allows "diagonal text" */}
-                  <div className="float-right h-8 w-32" />
-                  <p>
-                    Blah blah need a summary here, mention large scale sparse
-                    embeddings
-                  </p>
-                </Section>
-                <Section icon={<MdComputer />} title="Current Position">
-                  <div className="flex justify-between w-full items-baseline">
-                    <div className="text-lg">Facebook</div>
-                    <div>Research Scientist</div>
-                    <div>2018&ndash;present</div>
-                  </div>
-                  <ul className="list-triangle ml-3">
-                    <li>research</li>
-                    <li>leading interns</li>
-                    <li>project planning</li>
-                  </ul>
-                </Section>
-                <Section
-                  icon={<MdLibraryBooks />}
-                  title="Selected Publications"
-                >
-                  <Publication
-                    title="Empirical Mechanism Design for Optimizing Clearing Interval in Frequent Call Markets"
-                    authors={["E. Brinkman", "M. P. Wellman"]}
-                    conference="EC 2017"
-                  />
-                  <Publication
-                    title="Signal Structure and Strategic Information Acquisition"
-                    authors={["E. Brinkman", "M. P. Wellman", "S. E. Page"]}
-                    conference="AAMAS 2014"
-                  />
-                </Section>
-              </div>
-              <div className="flex flex-col flex-1 justify-between space-y-8 mt-8 md:mt-32 print:mt-32 mb-16">
-                <Section icon={<MdSchool />} title="Education">
-                  <School
-                    name="University of Michigan"
-                    years="2012&ndash;2018"
-                    degree="PhD in Computer Science and Engineering"
-                    gpa={3.81}
-                  >
-                    <p>theseis: FIXME</p>
-                    <p>Magna cum Laude</p>
-                    <p>
-                      Coursework: Machine Learning, Online Learning,
-                      Reinforcement Learning, Social Networks
-                    </p>
-                  </School>
-                  <School
-                    name="Washington University"
-                    years="2006&ndash;2010"
-                    degree="BS in Systems Science"
-                    gpa={3.88}
-                  >
-                    <p>Magna cum Laude</p>
-                    <p>
-                      Coursework: Algorithms for Nonlinear Optimization,
-                      Nonlinear Dynamic Systems
-                    </p>
-                  </School>
-                </Section>
-                <Section icon={<MdWhatshot />} title="Skills">
-                  <p>python, numpy, scipy, pytorch, sql</p>
-                  <p>rust, hack, haskell, typescript, broomball</p>
-                </Section>
-              </div>
-            </div>
-            <div className="absolute bottom-0 left-0 flex flex-col items-start font-title space-y-4">
-              <Header text="Affiliations" />
-              <div className="flex space-x-4 h-8">
-                <AffiliationLogo
-                  img={washu}
-                  alt="Wash U Logo"
-                  href="https://wustl.ed"
-                />
-                <AffiliationLogo
-                  img={apl}
-                  alt="APL Logo"
-                  href="https://jhuapl.edu"
-                />
-                <AffiliationLogo
-                  img={ll}
-                  alt="Lincoln Lab Logo"
-                  href="https://ll.mit.edu"
-                />
-                <AffiliationLogo
-                  img={umich}
-                  alt="University of Michigan Logo"
-                  href="https://umich.edu"
-                />
-                <AffiliationLogo
-                  img={upwork}
-                  alt="Upwork Logo"
-                  href="https://upwork.com"
-                />
-                <AffiliationLogo
-                  img={yelp}
-                  alt="Yelp Logo"
-                  href="https://yelp.com"
-                />
-                <AffiliationLogo
-                  img={fb}
-                  alt="Facebook Logo"
-                  href="https://facebook.com"
-                />
-              </div>
-            </div>
+              <p className="pt-16">
+                Researcher with skills across advanced machine learning,
+                micro-economics, and finance. I&apos;ve leveraged these the past
+                three years to empower teams across Meta and to create immediate
+                returns for key partner teams.
+              </p>
+            </Section>
+            <Section title="Current Position">
+              <Experience
+                company="Meta"
+                href="https://meta.com"
+                position="Research Scientist"
+                dates="2018&ndash;present"
+              >
+                <li>
+                  Researched, created, and deployed state-of-the-art large-scale
+                  sparse user-author-content models across Instagram, Integrity,
+                  Content-Understanding, and more.
+                </li>
+                <li>
+                  Developed transformer-based two-tower user-content models for
+                  cold-start unconnected content discovery that achieved half of
+                  our topline goals.
+                </li>
+                <li>
+                  Regularly conducted offline and online model analysis using
+                  SQL, python, and other necessary tools.
+                </li>
+                <li>
+                  Led ongoing project to learn hierarchical structure on top of
+                  existing user-content modeling.
+                </li>
+                <li>
+                  Advised two PhD interns on successful internship projects,
+                  resulting in accepted return offers.
+                </li>
+              </Experience>
+            </Section>
+            <Section title="Education">
+              <School
+                name="University of Michigan"
+                href="https://umich.edu"
+                years="2012&ndash;2018"
+                degree="PhD in Computer Science and Engineering"
+                honors="Magna cum Laude"
+              >
+                <p className="text-justify">
+                  Understanding Financial Market Behavior through Empirical
+                  Game-Theoretic Analysis
+                </p>
+              </School>
+              <School
+                name="Washington University"
+                href="https://wustl.edu"
+                years="2006&ndash;2010"
+                degree="BS in Systems Science"
+                honors="Magna cum Laude"
+              />
+            </Section>
+            <Section title="Selected Publications">
+              <Publication
+                title="Empirical Mechanism Design for Optimizing Clearing Interval in Frequent Call Markets"
+                authors={["E. Brinkman", "M. P. Wellman"]}
+                conference="EC 2017"
+                url="https://dl.acm.org/authorize?N30521"
+              />
+              <Publication
+                title="Signal Structure and Strategic Information Acquisition"
+                authors={["E. Brinkman", "M. P. Wellman", "S. E. Page"]}
+                conference="AAMAS 2014"
+                url="http://www.ifaamas.org/Proceedings/aamas2014/aamas/p229.pdf"
+              />
+            </Section>
+          </div>
+          <div className="flex flex-col shrink-0 justify-between p-6 pt-0 space-y-4 md:pt-40 print:pt-[21.25565616700221vw] md:pb-8 print:pb-8">
+            <Section title="Info">
+              <div>/ˈɛrɪk/</div>
+              <div>he/him</div>
+            </Section>
+            <Section title="Skills">
+              <LevelSkills
+                skills={{
+                  python: 5,
+                  numpy: 5,
+                  scipy: 5,
+                  pytorch: 5,
+                  sql: 4,
+                  "scikit-learn": 3,
+                  bash: 4,
+                  rust: 2,
+                  java: 4,
+                  "c++11": 3,
+                  lua: 3,
+                  hack: 2,
+                  haskell: 2,
+                  typescript: 3,
+                  broomball: 2,
+                }}
+              />
+            </Section>
           </div>
         </div>
-        <div className="absolute bg-purple-200 bottom-0 right-0 origin-top transform translate-x-2/4 translate-y-full rotate-12 w-mask h-mask" />
+        <Footing upward />
       </div>
     </div>
   );

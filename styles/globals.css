@@ -12,27 +12,34 @@
 
 /* tailwind customizations */
 @layer utilities {
-  .overflow-x-clip {
-    overflow-x: clip;
-  }
-  .overflow-y-clip {
-    overflow-y: clip;
+  .shape-outside-tri-ur {
+    shape-outside: polygon(0 0, 100% 0, 100% 100%);
   }
 
-  .flex-grow-phi {
-    flex-grow: 1.618
+  .no-page-margin {
+    page: no_margin;
   }
 }
 
 /* set printing size */
 @page {
-  margin: 0 0 0 0;
+  /* NOTE must match padding / 4 */
+  margin: 1.5rem 0;
+  height: 11in;
+  width: 8.5in;
+}
+
+@page no_margin {
+  margin-bottom: 0;
+}
+
+@page :first {
+  margin-top: 0;
 }
 
 /* for color printing */
 @media print {
   :root {
-    -webkit-print-color-adjust:exact;
-    color-adjust: exact;
+    print-color-adjust: exact;
   }
 }

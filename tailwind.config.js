@@ -1,8 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -13,19 +12,10 @@ module.exports = {
       listStyleType: {
         triangle: '"▸"',
       },
-      width: {
-        mask: "300vmax",
-      },
-      height: {
-        mask: "300vmax",
-      },
       screens: {
         print: { raw: "print" },
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

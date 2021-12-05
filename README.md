@@ -1,4 +1,4 @@
 Erik Brinkman's Resume
 ======================
 
-My personal resume, writeen in next.js and tailwind.
+My personal resume, written in next.js and tailwind.
