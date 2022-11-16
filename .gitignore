@@ -11,4 +11,5 @@
 # Cache #
 #########
 .next
+.cache
 tsconfig.tsbuildinfo
