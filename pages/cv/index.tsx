@@ -17,10 +17,8 @@ export default function CurriculumVitae(): ReactElement {
         <HeadingSpacer />
         <div className="p-6 md:pt-10 print:pt-10 space-y-4 min-h-screen">
           <Section title="Summary">
-            Researcher with skills across advanced machine learning,
-            micro-economics, and finance. I&apos;ve leveraged these the past
-            three years to empower teams across Meta and to create immediate
-            returns for key partner teams.
+            Responsible AI Researcher focusing on fairness, but with skills
+            across machine learning, micro-economics, and finance.
           </Section>
           <Section title="Employment">
             <Experience
@@ -231,6 +229,12 @@ export default function CurriculumVitae(): ReactElement {
             </School>
           </Section>
           <Section title="Publications">
+            <Publication
+              title="Data Structures for Deviation Payoffs"
+              authors={["B. Wiedenbeck", "E. Brinkman"]}
+              conference="AAMAS 2023"
+              url="https://www.southampton.ac.uk/~eg/AAMAS2023/pdfs/p670.pdf"
+            />
             <Publication
               title="Empirical Mechanism Design for Optimizing Clearing Interval in Frequent Call Markets"
               authors={["E. Brinkman", "M. P. Wellman"]}
