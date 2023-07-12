@@ -8,7 +8,6 @@ import LevelSkills from "../../components/level-skills";
 import Publication from "../../components/publication";
 import School from "../../components/school";
 import Section from "../../components/section";
-
 export default function CurriculumVitae(): ReactElement {
   return (
     <div className="overflow-hidden w-full min-h-screen">
