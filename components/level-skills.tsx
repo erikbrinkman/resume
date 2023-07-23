@@ -29,11 +29,28 @@ function Level({
 }
 
 export default function LevelSkills({
-  skills,
+  skills = {
+    python: 5,
+    numpy: 5,
+    scipy: 5,
+    pytorch: 5,
+    jax: 4,
+    sql: 4,
+    "scikit-learn": 3,
+    bash: 3,
+    rust: 3,
+    java: 3,
+    "c++11": 3,
+    lua: 3,
+    hack: 2,
+    haskell: 2,
+    typescript: 3,
+    broomball: 2,
+  },
   names = ["Novice", "Novice", "Competent", "Proficient", "Expert"],
   horizontal = false,
 }: {
-  skills: Record<string, number>;
+  skills?: Record<string, number>;
   names?: [string, string, string, string, string];
   horizontal?: boolean;
 }): ReactElement {

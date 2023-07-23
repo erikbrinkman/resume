@@ -20,7 +20,7 @@ export default function Publication({
       </div>
       <div className="w-full flex justify-between">
         <div className="">{authors.join(", ")}</div>
-        <div>{conference}</div>
+        <div className="shrink-0">{conference}</div>
       </div>
     </div>
   );

@@ -28,6 +28,10 @@ export default function CurriculumVitae(): ReactElement {
               dates="2018&ndash;present"
             >
               <li>
+                Developed SOTA calibration-based recommendation based fairness
+                metrics, and applied them to internal systems.
+              </li>
+              <li>
                 Researched, created, and deployed state-of-the-art large-scale
                 sparse user-author-content models across Instagram, Integrity,
                 Content-Understanding, and more.
@@ -230,6 +234,22 @@ export default function CurriculumVitae(): ReactElement {
           </Section>
           <Section title="Publications">
             <Publication
+              title="Matched Pair Calibration for Ranking Fairness"
+              authors={[
+                "H. Korevaar",
+                "C. McConnell",
+                "E. Tong",
+                "E. Brinkman",
+                "A. Shine",
+                "M. Abbas",
+                "B. Metevier",
+                "S. Corbett-Davies",
+                "K. El-Arini",
+              ]}
+              conference="In Submission"
+              url="https://arxiv.org/pdf/2306.03775.pdf"
+            />
+            <Publication
               title="Data Structures for Deviation Payoffs"
               authors={["B. Wiedenbeck", "E. Brinkman"]}
               conference="AAMAS 2023"
@@ -249,26 +269,7 @@ export default function CurriculumVitae(): ReactElement {
             />
           </Section>
           <Section title="Skills">
-            <LevelSkills
-              skills={{
-                python: 5,
-                numpy: 5,
-                scipy: 5,
-                pytorch: 5,
-                sql: 4,
-                "scikit-learn": 3,
-                bash: 4,
-                rust: 2,
-                java: 4,
-                "c++11": 3,
-                lua: 3,
-                hack: 2,
-                haskell: 2,
-                typescript: 3,
-                broomball: 2,
-              }}
-              horizontal
-            />
+            <LevelSkills horizontal />
           </Section>
         </div>
         <Footing />

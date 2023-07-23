@@ -21,10 +21,8 @@ export default function Resume(): ReactElement {
                 <HeadingSpacer />
               </div>
               <p className="pt-16">
-                Researcher with skills across advanced machine learning,
-                micro-economics, and finance. I&apos;ve leveraged these the past
-                three years to empower teams across Meta and to create immediate
-                returns for key partner teams.
+                Responsible AI Researcher focusing on fairness, but with skills
+                across machine learning, micro-economics, and finance.
               </p>
             </Section>
             <Section title="Current Position">
@@ -35,6 +33,10 @@ export default function Resume(): ReactElement {
                 dates="2018&ndash;present"
               >
                 <li>
+                  Developed SOTA calibration-based recommendation based fairness
+                  metrics, and applied them to internal systems.
+                </li>
+                <li>
                   Researched, created, and deployed state-of-the-art large-scale
                   sparse user-author-content models across Instagram, Integrity,
                   Content-Understanding, and more.
@@ -43,10 +45,6 @@ export default function Resume(): ReactElement {
                   Developed transformer-based two-tower user-content models for
                   cold-start unconnected content discovery that achieved half of
                   our topline goals.
-                </li>
-                <li>
-                  Regularly conducted offline and online model analysis using
-                  SQL, python, and other necessary tools.
                 </li>
                 <li>
                   Led ongoing project to learn hierarchical structure on top of
@@ -81,16 +79,16 @@ export default function Resume(): ReactElement {
             </Section>
             <Section title="Selected Publications">
               <Publication
+                title="Matched Pair Calibration for Ranking Fairness"
+                authors={["H. Korevaar", "C. McConnell", "et al."]}
+                conference="In Submission"
+                url="https://arxiv.org/pdf/2306.03775.pdf"
+              />
+              <Publication
                 title="Empirical Mechanism Design for Optimizing Clearing Interval in Frequent Call Markets"
                 authors={["E. Brinkman", "M. P. Wellman"]}
                 conference="EC 2017"
                 url="https://dl.acm.org/authorize?N30521"
-              />
-              <Publication
-                title="Signal Structure and Strategic Information Acquisition"
-                authors={["E. Brinkman", "M. P. Wellman", "S. E. Page"]}
-                conference="AAMAS 2014"
-                url="http://www.ifaamas.org/Proceedings/aamas2014/aamas/p229.pdf"
               />
             </Section>
           </div>
@@ -100,25 +98,7 @@ export default function Resume(): ReactElement {
               <div>he/him</div>
             </Section>
             <Section title="Skills">
-              <LevelSkills
-                skills={{
-                  python: 5,
-                  numpy: 5,
-                  scipy: 5,
-                  pytorch: 5,
-                  sql: 4,
-                  "scikit-learn": 3,
-                  bash: 4,
-                  rust: 2,
-                  java: 4,
-                  "c++11": 3,
-                  lua: 3,
-                  hack: 2,
-                  haskell: 2,
-                  typescript: 3,
-                  broomball: 2,
-                }}
-              />
+              <LevelSkills />
             </Section>
           </div>
         </div>

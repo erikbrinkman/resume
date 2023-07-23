@@ -4,3 +4,6 @@ export const assetPrefix =
 export const output = "export";
 export const distDir =
   process.env.NODE_ENV === "production" ? "docs" : undefined;
+export const images = {
+  unoptimized: true,
+};
