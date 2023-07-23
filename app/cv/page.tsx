@@ -8,9 +8,10 @@ import LevelSkills from "../../components/level-skills";
 import Publication from "../../components/publication";
 import School from "../../components/school";
 import Section from "../../components/section";
+
 export default function CurriculumVitae(): ReactElement {
   return (
-    <div className="overflow-hidden w-full min-h-screen">
+    <div className="overflow-hidden w-full min-h-screen [page:no\_margin]">
       <div className="max-w-3xl mx-auto w-full min-h-screen relative print:max-w-none">
         <Heading />
         <HeadingSpacer />
@@ -270,7 +271,7 @@ export default function CurriculumVitae(): ReactElement {
             />
           </Section>
         </div>
-        <Footing mobilePrint />
+        <Footing />
       </div>
     </div>
   );

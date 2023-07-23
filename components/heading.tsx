@@ -3,17 +3,18 @@ import { logo } from "./icons";
 
 /** Heading for the CV */
 export default function Heading(): ReactElement {
+  // note, the extra point in the clip-path is so that it animates properly
   return (
-    <div className="w-full md:absolute print:absolute">
-      {/* NOTE this is the slanted purple background when tilted */}
-      <div className="absolute w-[200vmax] h-[200vmax] origin-bottom-left -translate-y-full rotate-12 md:bg-violet-200 print:bg-violet-200" />
-      <div className="font-title p-6 flex flex-col items-end relative bg-violet-200 md:bg-transparent print:bg-transparent">
-        <div className="flex space-x-4">
-          <div className="shrink-0">
-            <img className="h-9" src={logo.src} alt="logo" />
-          </div>
-          <h1 className="text-5xl font-bold text-right">Erik Brinkman</h1>
-        </div>
+    <div className="w-[calc(50vw+24rem)] max-w-[100vw] print:w-screen bg-violet-200 left-0 [clip-path:polygon(0_0,100%_0,100%_100%,0_100%)] md:absolute md:aspect-[9/2] md:[clip-path:polygon(0_0,100%_0,100%_100%,0_0%)] print:absolute print:aspect-[9/2] print:[clip-path:polygon(0_0,100%_0,100%_100%)] transition-all">
+      <div className="max-w-3xl w-full font-title p-6 flex flex-col items-end">
+        <h1 className="text-5xl font-bold text-right">
+          <img
+            className="h-9 inline-block align-baseline mr-2"
+            src={logo.src}
+            alt="logo"
+          />
+          Erik Brinkman
+        </h1>
         <div className="hover:text-white hover:underline">
           <a href="mailto:erik.brinkman@gmail.com">erik.brinkman@gmail.com</a>
         </div>

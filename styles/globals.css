@@ -10,26 +10,14 @@
   }
 }
 
-/* tailwind customizations */
-@layer utilities {
-  .shape-outside-tri-ur {
-    shape-outside: polygon(0 0, 100% 0, 100% 100%);
-  }
-
-  .no-page-margin {
-    page: no_margin;
-  }
-}
-
 /* set printing size */
 @page {
-  /* NOTE must match padding / 4 */
   margin: 1.5rem 0;
   height: 11in;
   width: 8.5in;
 }
 
-@page no_margin {
+@page nomargin {
   margin-bottom: 0;
 }
 

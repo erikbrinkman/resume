@@ -6,29 +6,18 @@ import { apl, ll, meta, umich, upwork, washu, yelp } from "./icons";
 /** Footing for the CV */
 export default function Footing({
   upward = false,
-  mobilePrint = false,
 }: {
   /** render the element upward instead of downward: useful for a single page */
   upward?: boolean;
-  /** use mobile formatting when printing: useful for multi page */
-  mobilePrint?: boolean;
 }): ReactElement {
   const ups = upward
-    ? "md:absolute print:absolute md:bottom-0 print:bottom-0"
+    ? "md:absolute print:absolute md:bottom-0 print:bottom-0 print:aspect-[9/2] print:[clip-path:polygon(0_0,0_100%,100%_100%)]"
     : "";
-  const triClass = mobilePrint ? "" : "print:bg-violet-200";
-  const rectClass = mobilePrint ? "" : "print:bg-transparent";
   return (
     <div
-      className={`relative ${ups} w-full bottom-0 md:pt-8 print:pt-8 break-inside-avoid`}
+      className={`relative ${ups} bottom-0 md:left-[calc(24rem-50vw)] break-inside-avoid w-[calc(50vw+24rem)] print:w-screen max-w-[100vw] md:aspect-[9/2] [clip-path:polygon(0_0,0_100%,100%_100%,100%_0)] md:[clip-path:polygon(0_0,0_100%,100%_100%,100%_100%)] bg-violet-200 transition-all`}
     >
-      {/* NOTE this is the slanted purple background when tilted */}
-      <div
-        className={`absolute w-[200vmax] h-[200vmax] right-0 bottom-0 origin-top-right translate-y-full rotate-12 md:bg-violet-200 ${triClass}`}
-      />
-      <div
-        className={`p-6 relative bg-violet-200 md:bg-transparent ${rectClass}`}
-      >
+      <div className="p-6 max-w-3xl h-full ml-auto flex flex-col justify-end">
         <Header text="Affiliations" />
         <div className="flex space-x-4 h-8">
           <AffiliationLogo
