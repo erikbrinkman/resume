@@ -68,7 +68,9 @@ export default function LevelSkills({
       skills={leveled.get(name)}
     />
   ));
-  const grid = horizontal ? "print:grid-cols-2" : "md:grid-cols-1";
+  const grid = horizontal
+    ? "print:grid-cols-2"
+    : "md:grid-cols-1 print:grid-cols-1";
   return (
     <div className={`space-y-3 grid grid-cols-1 sm:grid-cols-2 ${grid}`}>
       {sections}
