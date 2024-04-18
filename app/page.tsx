@@ -10,13 +10,15 @@ import Section from "../components/section";
 
 export default function Resume(): ReactElement {
   return (
+    // eslint-disable-next-line spellcheck/spell-checker
     <div className="overflow-hidden w-full min-h-screen [page:nomargin]">
       <div className="max-w-3xl mx-auto w-full min-h-screen print:h-screen relative print:max-w-none">
         <Heading />
         <div className="w-full min-h-screen print:h-screen flex flex-col md:flex-row print:flex-row">
+          {/* eslint-disable-next-line spellcheck/spell-checker */}
           <div className="flex flex-col justify-between p-6 pb-4 md:pt-10 print:pt-10 md:pb-44 print:pb-[calc(200vw/9)] space-y-4 print:space-y-2">
             <Section title="Summary">
-              {/* NOTE hacky adjustments to get float to still wrap text at an angle */}
+              {/* NOTE adjustments to get float to still wrap text at an angle */}
               <div className="-mt-[4.5rem]">
                 <HeadingSpacer />
               </div>
@@ -92,6 +94,7 @@ export default function Resume(): ReactElement {
               />
             </Section>
           </div>
+          {/* eslint-disable-next-line spellcheck/spell-checker */}
           <div className="flex flex-col shrink-0 justify-between p-6 pt-0 space-y-4 md:pt-40 print:pt-[calc(200vw/9)] md:pb-8 print:pb-8">
             <Section title="Info">
               <div>/ˈɛrɪk/</div>

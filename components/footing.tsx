@@ -13,6 +13,7 @@ export default function Footing({
   const ups = upward
     ? "md:absolute print:absolute md:bottom-0 print:bottom-0 print:aspect-[9/2] print:[clip-path:polygon(0_0,0_100%,100%_100%)]"
     : "";
+  /* eslint-disable spellcheck/spell-checker */
   return (
     <div
       className={`relative ${ups} bottom-0 md:left-[calc(24rem-50vw)] break-inside-avoid w-[calc(50vw+24rem)] print:w-screen max-w-[100vw] md:aspect-[9/2] [clip-path:polygon(0_0,0_100%,100%_100%,100%_0)] md:[clip-path:polygon(0_0,0_100%,100%_100%,100%_100%)] bg-violet-200 transition-all`}
@@ -47,4 +48,5 @@ export default function Footing({
       </div>
     </div>
   );
+  /* eslint-enable spellcheck/spell-checker */
 }

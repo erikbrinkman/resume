@@ -120,7 +120,7 @@ export default function CurriculumVitae(): ReactElement {
               </li>
             </Experience>
             <Experience
-              company="Univeristy of Michigan"
+              company="University of Michigan"
               href="https://umich.edu"
               position="Graduate Student Instructor"
               dates="Fall 2013"
