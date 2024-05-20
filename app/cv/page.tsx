@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import DotList from "../../components/dot-list";
 import Experience from "../../components/experience";
+import ExperienceItem from "../../components/experience-item";
 import Footing from "../../components/footing";
 import Heading from "../../components/heading";
 import HeadingSpacer from "../../components/heading-spacer";
@@ -27,32 +28,57 @@ export default function CurriculumVitae(): ReactElement {
               position="Research Scientist"
               dates="2018&ndash;present"
             >
-              <li>
+              <ExperienceItem>
+                Enabled release of llama3 through red teaming to measure and
+                fine-tune against adversarial risks [
+                <a
+                  className="hover:underline"
+                  href="https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md"
+                >
+                  github.com/meta-llama/llama3
+                </a>
+                ]
+              </ExperienceItem>
+              <ExperienceItem>
+                Pioneered applying high dimensional Bayesian optimization
+                towards finding system level adversarial prompts for SOTA models
+              </ExperienceItem>
+              <ExperienceItem>
+                Designed and developed key metrics for hyper-spherical point
+                diversity, which were used to understand relative coverage of
+                prompts and unsafe responses for model evaluation
+              </ExperienceItem>
+              <ExperienceItem>
+                Developed and analyzed diffusion models for systemic bias,
+                including bridging between policy and product to ensure
+                successful model launch
+              </ExperienceItem>
+              <ExperienceItem>
                 Developed SOTA calibration-based recommendation based fairness
                 metrics, and applied them to internal systems.
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Researched, created, and deployed state-of-the-art large-scale
                 sparse user-author-content models across Instagram, Integrity,
                 Content-Understanding, and more.
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Developed transformer-based two-tower user-content models for
                 cold-start unconnected content discovery that achieved half of
                 our topline goals.
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Regularly conducted offline and online model analysis using SQL,
                 python, and other necessary tools.
-              </li>
-              <li>
-                Led ongoing project to learn hierarchical structure on top of
-                existing user-content modeling.
-              </li>
-              <li>
-                Advised two PhD interns on successful internship projects,
-                resulting in accepted return offers.
-              </li>
+              </ExperienceItem>
+              <ExperienceItem>
+                Led project to learn hierarchical structure on top of existing
+                user-content modeling.
+              </ExperienceItem>
+              <ExperienceItem>
+                Mentored two PhD interns to successful project completion and
+                return offers.
+              </ExperienceItem>
             </Experience>
             <Experience
               company="University of Michigan"
@@ -60,23 +86,23 @@ export default function CurriculumVitae(): ReactElement {
               position="Graduate Student Research Assistant"
               dates="2012&ndash;2018"
             >
-              <li>
+              <ExperienceItem>
                 Studied auction settings where having access to public
                 information is bad for all agents (AAMAS 2014)
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Demonstrated surprising efficiency of continuous double auctions
                 in the presence of strategic agents (Submitted TEAC)
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Investigated how to design a modern frequent call market using
                 empirical mechanism design (EC)
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Analyzing &quot;Flash Crash&quot;, metrics that indicate
                 susceptibility, and policies that mitigate risk in the presence
                 of strategic traders
-              </li>
+              </ExperienceItem>
             </Experience>
             <Experience
               company="Meta (then Facebook)"
@@ -84,10 +110,12 @@ export default function CurriculumVitae(): ReactElement {
               position="Intern"
               dates="Summer 2017"
             >
-              <li>
+              <ExperienceItem>
                 Trained content embedding model of job openings using caffe2
-              </li>
-              <li>Doubled click-through rate for suggested jobs surface</li>
+              </ExperienceItem>
+              <ExperienceItem>
+                Doubled click-through rate for suggested jobs surface
+              </ExperienceItem>
             </Experience>
             <Experience
               company="Yelp"
@@ -95,14 +123,14 @@ export default function CurriculumVitae(): ReactElement {
               position="Intern"
               dates="Summer 2015"
             >
-              <li>
+              <ExperienceItem>
                 Modified auto-bidder to increase advertiser return on
                 investiment
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Ran live experiments to determine modification effects and
                 optimal parameters
-              </li>
+              </ExperienceItem>
             </Experience>
             <Experience
               company="Upwork (then Elance/oDesk)"
@@ -110,14 +138,14 @@ export default function CurriculumVitae(): ReactElement {
               position="Research Intern"
               dates="Summer 2014"
             >
-              <li>
+              <ExperienceItem>
                 Developed search ranking optimization based on click-through
                 data
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Built profile photo categorizer for demographics and search
                 ranking
-              </li>
+              </ExperienceItem>
             </Experience>
             <Experience
               company="University of Michigan"
@@ -125,9 +153,9 @@ export default function CurriculumVitae(): ReactElement {
               position="Graduate Student Instructor"
               dates="Fall 2013"
             >
-              <li>
+              <ExperienceItem>
                 TA&apos;d introductory Algorithms and Data Structures course
-              </li>
+              </ExperienceItem>
             </Experience>
             <Experience
               company="MIT Lincoln Laboratory"
@@ -135,19 +163,21 @@ export default function CurriculumVitae(): ReactElement {
               position="Researcher"
               dates="2010&ndash;2012"
             >
-              <li>
+              <ExperienceItem>
                 Implemented an efficient topic modeling algorithm (PLSA) in
                 MapReduce
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Prototyped real time entity resolving and disambiguation system
                 for news corpora
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Designed a database that supports general queries on geographic
                 descriptions
-              </li>
-              <li>Adapted aggregate movement model between data modalities</li>
+              </ExperienceItem>
+              <ExperienceItem>
+                Adapted aggregate movement model between data modalities
+              </ExperienceItem>
             </Experience>
             <Experience
               company="JHU Applied Physics Laboratory"
@@ -155,16 +185,16 @@ export default function CurriculumVitae(): ReactElement {
               position="Intern"
               dates="Summer 2009"
             >
-              <li>
+              <ExperienceItem>
                 Studied the Cramér-Rao Lower Bound (CRLB), and it&apos;s
                 implications on polar coordinate tracking with both continuous
                 and discrete noise
-              </li>
-              <li>
+              </ExperienceItem>
+              <ExperienceItem>
                 Built a Matlab simulation to investigate the relation between
                 Extended Kalman Filter tracking error and CRLB for important
                 target trajectories
-              </li>
+              </ExperienceItem>
             </Experience>
           </Section>
           <Section title="Education">

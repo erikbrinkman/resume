@@ -8,7 +8,7 @@ export default function Publication({
 }: {
   title: string;
   authors: string[];
-  conference: string;
+  conference?: string;
   url: string;
 }): ReactElement {
   return (

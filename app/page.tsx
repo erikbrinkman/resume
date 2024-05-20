@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import Experience from "../components/experience";
+import ExperienceItem from "../components/experience-item";
 import Footing from "../components/footing";
 import Heading from "../components/heading";
 import HeadingSpacer from "../components/heading-spacer";
@@ -23,8 +24,10 @@ export default function Resume(): ReactElement {
                 <HeadingSpacer />
               </div>
               <p className="pt-16">
-                Responsible AI Researcher focusing on fairness, but with skills
-                across machine learning, micro-economics, and finance.
+                Responsible AI Researcher driving positive social impact through
+                expertise spanning fairness and Generative AI safety, fueled by
+                a strong foundations in machine learning, micro economics, and
+                finance.
               </p>
             </Section>
             <Section title="Current Position">
@@ -34,28 +37,45 @@ export default function Resume(): ReactElement {
                 position="Research Scientist"
                 dates="2018&ndash;present"
               >
-                <li>
+                <ExperienceItem>
+                  Enabled release of llama3 through red teaming to measure and
+                  fine-tune against adversarial risks [
+                  <a
+                    className="hover:underline"
+                    href="https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md"
+                  >
+                    github.com/meta-llama/llama3
+                  </a>
+                  ]
+                </ExperienceItem>
+                <ExperienceItem>
+                  Pioneered applying high dimensional Bayesian optimization
+                  towards finding system level adversarial prompts for SOTA
+                  models
+                </ExperienceItem>
+                <ExperienceItem>
+                  Designed and developed key metrics for hyper-spherical point
+                  diversity, which were used to understand relative coverage of
+                  prompts and unsafe responses for model evaluation
+                </ExperienceItem>
+                <ExperienceItem>
+                  Developed and analyzed diffusion models for systemic bias,
+                  including bridging between policy and product to ensure
+                  successful model launch
+                </ExperienceItem>
+                <ExperienceItem>
                   Developed SOTA calibration-based recommendation based fairness
                   metrics, and applied them to internal systems.
-                </li>
-                <li>
+                </ExperienceItem>
+                <ExperienceItem>
                   Researched, created, and deployed state-of-the-art large-scale
                   sparse user-author-content models across Instagram, Integrity,
                   Content-Understanding, and more.
-                </li>
-                <li>
-                  Developed transformer-based two-tower user-content models for
-                  cold-start unconnected content discovery that achieved half of
-                  our topline goals.
-                </li>
-                <li>
-                  Led ongoing project to learn hierarchical structure on top of
-                  existing user-content modeling.
-                </li>
-                <li>
-                  Advised two PhD interns on successful internship projects,
-                  resulting in accepted return offers.
-                </li>
+                </ExperienceItem>
+                <ExperienceItem>
+                  Mentored two PhD interns to successful project completion and
+                  return offers.
+                </ExperienceItem>
               </Experience>
             </Section>
             <Section title="Education">
@@ -83,14 +103,7 @@ export default function Resume(): ReactElement {
               <Publication
                 title="Matched Pair Calibration for Ranking Fairness"
                 authors={["H. Korevaar", "C. McConnell", "et al."]}
-                conference="In Submission"
                 url="https://arxiv.org/pdf/2306.03775.pdf"
-              />
-              <Publication
-                title="Empirical Mechanism Design for Optimizing Clearing Interval in Frequent Call Markets"
-                authors={["E. Brinkman", "M. P. Wellman"]}
-                conference="EC 2017"
-                url="https://dl.acm.org/authorize?N30521"
               />
             </Section>
           </div>

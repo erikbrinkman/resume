@@ -19,6 +19,7 @@ export default function Experience({
   ) : (
     company
   );
+
   return (
     <div className="break-inside-avoid">
       <div className="flex justify-between w-full items-baseline">
