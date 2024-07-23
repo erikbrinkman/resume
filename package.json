@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --turbo",
-    "export": "next build && touch docs/.nojekyll",
+    "export": "next build",
     "fmt": "prettier --cache --write 'app/**/*.{ts,tsx}' 'components/**/*.{ts,tsx}' '*.{json,js}'",
     "lint": "tsc && eslint 'app/**/*.{ts,tsx}' 'components/**/*.{ts,tsx}'"
   },
