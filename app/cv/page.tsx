@@ -264,6 +264,11 @@ export default function CurriculumVitae(): ReactElement {
           </Section>
           <Section title="Publications">
             <Publication
+              title="The Llama 3 Herd of Models"
+              authors={["Llama Team"]}
+              url="https://arxiv.org/pdf/2407.21783"
+            />
+            <Publication
               title="Matched Pair Calibration for Ranking Fairness"
               authors={[
                 "H. Korevaar",
@@ -276,8 +281,7 @@ export default function CurriculumVitae(): ReactElement {
                 "S. Corbett-Davies",
                 "K. El-Arini",
               ]}
-              conference="In Submission"
-              url="https://arxiv.org/pdf/2306.03775.pdf"
+              url="https://arxiv.org/pdf/2306.03775"
             />
             <Publication
               title="Data Structures for Deviation Payoffs"

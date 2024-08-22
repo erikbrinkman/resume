@@ -5,3 +5,4 @@
 cache
 tsconfig.tsbuildinfo
 node_modules
+out

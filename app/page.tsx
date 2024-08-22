@@ -59,11 +59,6 @@ export default function Resume(): ReactElement {
                   prompts and unsafe responses for model evaluation
                 </ExperienceItem>
                 <ExperienceItem>
-                  Developed and analyzed diffusion models for systemic bias,
-                  including bridging between policy and product to ensure
-                  successful model launch
-                </ExperienceItem>
-                <ExperienceItem>
                   Developed SOTA calibration-based recommendation based fairness
                   metrics, and applied them to internal systems.
                 </ExperienceItem>
@@ -71,10 +66,6 @@ export default function Resume(): ReactElement {
                   Researched, created, and deployed state-of-the-art large-scale
                   sparse user-author-content models across Instagram, Integrity,
                   Content-Understanding, and more.
-                </ExperienceItem>
-                <ExperienceItem>
-                  Mentored two PhD interns to successful project completion and
-                  return offers.
                 </ExperienceItem>
               </Experience>
             </Section>
@@ -101,9 +92,14 @@ export default function Resume(): ReactElement {
             </Section>
             <Section title="Selected Publications">
               <Publication
+                title="The Llama 3 Herd of Models"
+                authors={["Llama Team"]}
+                url="https://arxiv.org/pdf/2407.21783"
+              />
+              <Publication
                 title="Matched Pair Calibration for Ranking Fairness"
                 authors={["H. Korevaar", "C. McConnell", "et al."]}
-                url="https://arxiv.org/pdf/2306.03775.pdf"
+                url="https://arxiv.org/pdf/2306.03775"
               />
             </Section>
           </div>
