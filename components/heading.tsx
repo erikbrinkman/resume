@@ -30,6 +30,11 @@ export default function Heading(): ReactElement {
             erikbrinkman.github.io
           </a>
         </div>
+        <div className="hover:text-white hover:underline">
+          <a href="tel:+13146326235" target="_blank" rel="noreferrer">
+            314.632.6235
+          </a>
+        </div>
       </div>
     </div>
   );
