@@ -30,43 +30,43 @@ function Level({
 
 export default function LevelSkills({
   skills = {
-    python: 5,
-    numpy: 5,
-    scipy: 5,
-    pytorch: 5,
-    jax: 4,
-    sql: 4,
+    python: 3,
+    pytorch: 3,
+    jax: 2,
+    sql: 3,
     // eslint-disable-next-line spellcheck/spell-checker
-    "scikit-learn": 3,
-    rust: 3,
-    java: 3,
-    "c++11": 3,
-    lua: 2,
-    hack: 2,
-    haskell: 2,
-    typescript: 3,
+    "scikit-learn": 2,
+    rust: 2,
+    java: 2,
+    "c++11": 2,
+    lua: 1,
+    hack: 1,
+    haskell: 1,
+    cuda: 1,
+    typescript: 2,
   },
-  names = ["Novice", "Novice", "Competent", "Proficient", "Expert"],
+  names = ["Novice", "Competent", "Proficient"],
   horizontal = false,
 }: {
   skills?: Record<string, number>;
-  names?: [string, string, string, string, string];
+  names?: readonly string[];
   horizontal?: boolean;
 }): ReactElement {
-  const uniqueNames = [...new Set(names)];
-  uniqueNames.sort((a, b) => names.indexOf(b) - names.indexOf(a));
-  const leveled = new Map<string, string[]>(uniqueNames.map((n) => [n, []]));
+  const leveled = new Map<string, string[]>(names.map((n) => [n, []]));
   for (const [skill, level] of Object.entries(skills)) {
     leveled.get(names[level - 1])?.push(skill);
   }
-  const sections = uniqueNames.map((name) => (
-    <Level
-      key={name}
-      name={name}
-      horizontal={horizontal}
-      skills={leveled.get(name)}
-    />
-  ));
+  const sections = names
+    .slice()
+    .reverse()
+    .map((name) => (
+      <Level
+        key={name}
+        name={name}
+        horizontal={horizontal}
+        skills={leveled.get(name)}
+      />
+    ));
   const grid = horizontal
     ? "print:grid-cols-2"
     : "md:grid-cols-1 print:grid-cols-1";
