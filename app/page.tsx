@@ -92,14 +92,32 @@ export default function Resume(): ReactElement {
             </Section>
             <Section title="Selected Publications">
               <Publication
+                title="Automated Red Teaming with GOAT: the Generative Offensive Agent Tester"
+                authors={[
+                  "M. Pavlova",
+                  "E. Brinkman",
+                  // eslint-disable-next-line spellcheck/spell-checker
+                  "K. Iyer",
+                  // eslint-disable-next-line spellcheck/spell-checker
+                  "V. Albiero",
+                  // eslint-disable-next-line spellcheck/spell-checker
+                  "J. Bitton",
+                  "H. Nguyen",
+                  "J. Li",
+                  // eslint-disable-next-line spellcheck/spell-checker
+                  "C. Ferrer",
+                  // eslint-disable-next-line spellcheck/spell-checker
+                  "I. Evtimov",
+                  // eslint-disable-next-line spellcheck/spell-checker
+                  "A. Grattafiori",
+                ]}
+                url="https://arxiv.org/pdf/2410.01606"
+                maxAuthors={3}
+              />
+              <Publication
                 title="The Llama 3 Herd of Models"
                 authors={["Llama Team"]}
                 url="https://arxiv.org/pdf/2407.21783"
-              />
-              <Publication
-                title="Matched Pair Calibration for Ranking Fairness"
-                authors={["H. Korevaar", "C. McConnell", "et al."]}
-                url="https://arxiv.org/pdf/2306.03775"
               />
             </Section>
           </div>

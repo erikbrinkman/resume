@@ -5,12 +5,16 @@ export default function Publication({
   authors,
   conference,
   url,
+  maxAuthors = Infinity,
 }: {
   title: string;
   authors: string[];
   conference?: string;
   url: string;
+  maxAuthors?: number;
 }): ReactElement {
+  const byline =
+    authors.length > maxAuthors ? `${authors[0]} et al.` : authors.join(", ");
   return (
     <div>
       <div className="text-lg hover:underline">
@@ -19,7 +23,7 @@ export default function Publication({
         </a>
       </div>
       <div className="w-full flex justify-between">
-        <div className="">{authors.join(", ")}</div>
+        <div className="">{byline}</div>
         <div className="shrink-0">{conference}</div>
       </div>
     </div>

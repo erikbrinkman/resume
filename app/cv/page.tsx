@@ -264,6 +264,42 @@ export default function CurriculumVitae(): ReactElement {
           </Section>
           <Section title="Publications">
             <Publication
+              title="Automated Red Teaming with GOAT: the Generative Offensive Agent Tester"
+              authors={[
+                "M. Pavlova",
+                "E. Brinkman",
+                // eslint-disable-next-line spellcheck/spell-checker
+                "K. Iyer",
+                // eslint-disable-next-line spellcheck/spell-checker
+                "V. Albiero",
+                // eslint-disable-next-line spellcheck/spell-checker
+                "J. Bitton",
+                "H. Nguyen",
+                "J. Li",
+                // eslint-disable-next-line spellcheck/spell-checker
+                "C. Ferrer",
+                // eslint-disable-next-line spellcheck/spell-checker
+                "I. Evtimov",
+                // eslint-disable-next-line spellcheck/spell-checker
+                "A. Grattafiori",
+              ]}
+              url="https://arxiv.org/pdf/2410.01606"
+            />
+            <Publication
+              // eslint-disable-next-line spellcheck/spell-checker
+              title="Gradient-based Jailbreak Images for Multimodal Fusion Models"
+              authors={[
+                // eslint-disable-next-line spellcheck/spell-checker
+                "J. Rando",
+                "H. Korevaar",
+                "E. Brinkman",
+                // eslint-disable-next-line spellcheck/spell-checker
+                "I. Evtimov",
+                "F. Tramèr",
+              ]}
+              url="https://arxiv.org/pdf/2410.03489"
+            />
+            <Publication
               title="The Llama 3 Herd of Models"
               authors={["Llama Team"]}
               url="https://arxiv.org/pdf/2407.21783"
