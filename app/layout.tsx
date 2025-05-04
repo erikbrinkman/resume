@@ -1,10 +1,8 @@
 import { Metadata } from "next";
 import { ReactElement, ReactNode } from "react";
-import "../styles/globals.css";
+import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Erik Brinkman",
-};
+export const metadata: Metadata = { title: "Erik Brinkman" };
 
 export default function RootLayout({
   children,
