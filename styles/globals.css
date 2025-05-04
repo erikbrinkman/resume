@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Lato&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 @layer base {
   body, html, #__next {
     height: 100%;
   }
+}
+
+@theme {
+  --font-title: Josefin Sans, sans-serif;
+  --font-sans: Lato, san-serif;
 }
 
 /* set printing size */

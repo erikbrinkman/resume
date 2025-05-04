@@ -27,9 +27,9 @@ export default function Experience({
           <span className="text-lg font-bold">{nameElem}</span>
           <span>{position}</span>
         </div>
-        <div className="flex-shrink-0">{dates}</div>
+        <div className="shrink-0">{dates}</div>
       </div>
-      <ul className="list-triangle ml-3 text-justify space-y-1">{children}</ul>
+      <ul className="list-['▸'] ml-3 text-justify space-y-1">{children}</ul>
     </div>
   );
 }
