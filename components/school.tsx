@@ -35,7 +35,7 @@ export default function School({
     <div className="break-inside-avoid">
       <div className="flex justify-between w-full items-baseline">
         <div className="text-lg font-bold">{nameElem}</div>
-        <div className="flex-shrink-0">{years}</div>
+        <div className="shrink-0">{years}</div>
       </div>
       <div className="flex flex-col sm:flex-row print:flex-row justify-between w-full items-baseline">
         <div>{degree}</div>

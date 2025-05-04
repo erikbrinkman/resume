@@ -7,7 +7,7 @@ export default function Heading(): ReactElement {
   const { src } = logo as { src: string };
   return (
     // eslint-disable-next-line spellcheck/spell-checker
-    <div className="w-[calc(50vw+24rem)] max-w-[100vw] print:w-screen bg-violet-200 left-0 [clip-path:polygon(0_0,100%_0,100%_100%,0_100%)] md:absolute md:aspect-[9/2] md:[clip-path:polygon(0_0,100%_0,100%_100%,0_0%)] print:absolute print:aspect-[9/2] print:[clip-path:polygon(0_0,100%_0,100%_100%)] transition-all">
+    <div className="w-[calc(50vw+24rem)] max-w-[100vw] print:w-screen bg-violet-200 left-0 [clip-path:polygon(0_0,100%_0,100%_100%,0_100%)] md:absolute md:aspect-9/2 md:[clip-path:polygon(0_0,100%_0,100%_100%,0_0%)] print:absolute print:aspect-9/2 print:[clip-path:polygon(0_0,100%_0,100%_100%)] transition-all">
       <div className="max-w-3xl w-full font-title p-6 flex flex-col items-end">
         <h1 className="text-5xl font-bold text-right">
           <img
