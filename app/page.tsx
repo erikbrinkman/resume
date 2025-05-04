@@ -30,12 +30,23 @@ export default function Resume(): ReactElement {
                 finance.
               </p>
             </Section>
-            <Section title="Current Position">
+            <Section title="Recent Experience">
+              <Experience
+                company="LinkedIn"
+                href="https://linkedin.com"
+                position="Responsible AI Researcher"
+                dates="2025&ndash;present"
+              >
+                <ExperienceItem>
+                  Created AI policy guidlines and governance for safe LLM model
+                  deployment
+                </ExperienceItem>
+              </Experience>
               <Experience
                 company="Meta"
                 href="https://meta.com"
                 position="Research Scientist"
-                dates="2018&ndash;present"
+                dates="2018&ndash;2025"
               >
                 <ExperienceItem>
                   Enabled release of llama3 through red teaming to measure and
@@ -61,11 +72,6 @@ export default function Resume(): ReactElement {
                 <ExperienceItem>
                   Developed SOTA calibration-based recommendation based fairness
                   metrics, and applied them to internal systems.
-                </ExperienceItem>
-                <ExperienceItem>
-                  Researched, created, and deployed state-of-the-art large-scale
-                  sparse user-author-content models across Instagram, Integrity,
-                  Content-Understanding, and more.
                 </ExperienceItem>
               </Experience>
             </Section>
