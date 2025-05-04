@@ -23,10 +23,25 @@ export default function CurriculumVitae(): ReactElement {
           </Section>
           <Section title="Employment">
             <Experience
+              company="LinkedIn"
+              href="https://linkedin.com"
+              position="Responsible AI Researcher"
+              dates="2025&ndash;present"
+            >
+              <ExperienceItem>
+                Created AI policy guidlines and governance for safe LLM model
+                deployment
+              </ExperienceItem>
+              <ExperienceItem>
+                Created framework and tools for measuring and understand the
+                effacy of policy compliance
+              </ExperienceItem>
+            </Experience>
+            <Experience
               company="Meta"
               href="https://meta.com"
               position="Research Scientist"
-              dates="2018&ndash;present"
+              dates="2018&ndash;2025"
             >
               <ExperienceItem>
                 Enabled release of llama3 through red teaming to measure and
