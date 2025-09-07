@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 /** NOTE this float allows for diagonal wrapping */
 export default function HeadingSpacer(): ReactElement {

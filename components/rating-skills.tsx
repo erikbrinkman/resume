@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 function Rating({ fill }: { fill: boolean }): ReactElement {
   const bg = fill ? "bg-purple-200" : "";
@@ -10,6 +10,7 @@ function Rating({ fill }: { fill: boolean }): ReactElement {
 function SkillRating({ level }: { level: number }): ReactElement {
   const ratings = Array(5)
     .fill(null)
+    // biome-ignore lint/suspicious/noArrayIndexKey: index is what's important
     .map((_, i) => <Rating key={i} fill={i < level} />);
   return <div className="flex space-x-1">{ratings}</div>;
 }
