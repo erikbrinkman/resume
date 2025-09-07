@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import Experience from "../components/experience";
 import ExperienceItem from "../components/experience-item";
 import Footing from "../components/footing";
