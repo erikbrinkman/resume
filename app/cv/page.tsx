@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import DotList from "../../components/dot-list";
 import Experience from "../../components/experience";
 import ExperienceItem from "../../components/experience-item";

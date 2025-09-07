@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import DotList from "./dot-list";
 
 function VertList({ skills }: { skills: string[] }): ReactElement {

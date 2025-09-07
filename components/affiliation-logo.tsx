@@ -1,4 +1,5 @@
-import { ReactElement } from "react";
+import Image from "next/image";
+import type { ReactElement } from "react";
 
 export default function AffiliationLogo({
   img,
@@ -11,7 +12,13 @@ export default function AffiliationLogo({
 }): ReactElement {
   return (
     <a href={href} target="_blank" rel="noreferrer">
-      <img className="h-full hover:invert" src={img.src} alt={alt} />
+      <Image
+        width={32}
+        height={32}
+        className="h-full hover:invert"
+        src={img.src}
+        alt={alt}
+      />
     </a>
   );
 }

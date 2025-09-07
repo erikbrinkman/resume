@@ -6,26 +6,21 @@
   "scripts": {
     "dev": "next dev --turbo",
     "export": "next build",
-    "fmt": "prettier --cache --write 'app/**/*.{ts,tsx}' 'components/**/*.{ts,tsx}' '*.{json,js}'",
-    "lint": "tsc && eslint 'app/**/*.{ts,tsx}' 'components/**/*.{ts,tsx}'"
+    "fmt": "biome format --write",
+    "lint": "tsc && biome check"
   },
   "devDependencies": {
-    "@babel/core": "^7.27.1",
-    "@tailwindcss/postcss": "^4.1.5",
-    "@types/react": "^19.1.2",
+    "@babel/core": "^7.28.4",
+    "@biomejs/biome": "^2.2.3",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/react": "^19.1.12",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.26.0",
-    "eslint-config-next": "^15.3.1",
-    "eslint-plugin-spellcheck": "^0.0.20",
-    "next": "^15.3.1",
-    "postcss": "^8.5.3",
-    "prettier": "^3.5.3",
-    "prettier-plugin-organize-imports": "^4.1.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "next": "^15.5.2",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
-    "tailwindcss": "^4.1.5",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.31.1"
+    "tailwindcss": "^4.1.13",
+    "typescript": "~5.9.2"
   }
 }
