@@ -1,0 +1,50 @@
+name: release
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment, but never cancel an in-progress production
+# deploy.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Gate the release on the same checks that run for pull requests.
+  gate:
+    uses: ./.github/workflows/build.yml
+
+  # Build the static export into a Pages artifact.
+  build:
+    needs: gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - uses: actions/configure-pages@v5
+        with:
+          static_site_generator: next
+      - run: bun install
+      - run: bun export
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  # Deploy the artifact. Kept separate from the build so a failed deploy can be
+  # re-run without rebuilding the site.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
