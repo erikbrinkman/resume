@@ -11,12 +11,10 @@ import Section from "../components/section";
 
 export default function Resume(): ReactElement {
   return (
-    // eslint-disable-next-line spellcheck/spell-checker
     <div className="overflow-hidden w-full min-h-screen [page:nomargin]">
       <div className="max-w-3xl mx-auto w-full min-h-screen print:h-screen relative print:max-w-none">
         <Heading />
         <div className="w-full min-h-screen print:h-screen flex flex-col md:flex-row print:flex-row">
-          {/* eslint-disable-next-line spellcheck/spell-checker */}
           <div className="flex flex-col justify-between p-6 pb-4 md:pt-10 print:pt-10 md:pb-44 print:pb-[calc(200vw/9)] space-y-4 print:space-y-2">
             <Section title="Summary">
               {/* NOTE adjustments to get float to still wrap text at an angle */}
@@ -26,7 +24,7 @@ export default function Resume(): ReactElement {
               <p className="pt-16">
                 Responsible AI Researcher driving positive social impact through
                 expertise spanning fairness and Generative AI safety, fueled by
-                a strong foundations in machine learning, micro economics, and
+                a strong foundation in machine learning, micro economics, and
                 finance.
               </p>
             </Section>
@@ -38,7 +36,7 @@ export default function Resume(): ReactElement {
                 dates="2025&ndash;present"
               >
                 <ExperienceItem>
-                  Created AI policy guidlines and governance for safe LLM model
+                  Created AI policy guidelines and governance for safe LLM model
                   deployment
                 </ExperienceItem>
               </Experience>
@@ -102,19 +100,13 @@ export default function Resume(): ReactElement {
                 authors={[
                   "M. Pavlova",
                   "E. Brinkman",
-                  // eslint-disable-next-line spellcheck/spell-checker
                   "K. Iyer",
-                  // eslint-disable-next-line spellcheck/spell-checker
                   "V. Albiero",
-                  // eslint-disable-next-line spellcheck/spell-checker
                   "J. Bitton",
                   "H. Nguyen",
                   "J. Li",
-                  // eslint-disable-next-line spellcheck/spell-checker
                   "C. Ferrer",
-                  // eslint-disable-next-line spellcheck/spell-checker
                   "I. Evtimov",
-                  // eslint-disable-next-line spellcheck/spell-checker
                   "A. Grattafiori",
                 ]}
                 url="https://arxiv.org/pdf/2410.01606"
@@ -127,7 +119,6 @@ export default function Resume(): ReactElement {
               />
             </Section>
           </div>
-          {/* eslint-disable-next-line spellcheck/spell-checker */}
           <div className="flex flex-col shrink-0 justify-between p-6 pt-0 space-y-4 md:pt-40 print:pt-[calc(200vw/9)] md:pb-8 print:pb-8">
             <Section title="Info">
               <div>/ˈɛrɪk/</div>
