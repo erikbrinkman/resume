@@ -26,12 +26,12 @@ jobs:
     needs: gate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: oven-sh/setup-bun@v2
       - uses: actions/configure-pages@v5
         with:
           static_site_generator: next
-      - run: bun install
+      - run: bun install --frozen-lockfile
       - run: bun export
       - uses: actions/upload-pages-artifact@v3
         with:
