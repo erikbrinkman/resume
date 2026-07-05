@@ -34,7 +34,6 @@ export default function LevelSkills({
     pytorch: 3,
     jax: 2,
     sql: 3,
-    // eslint-disable-next-line spellcheck/spell-checker
     "scikit-learn": 2,
     rust: 2,
     java: 2,

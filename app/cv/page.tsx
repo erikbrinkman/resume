@@ -12,7 +12,7 @@ import Section from "../../components/section";
 
 export default function CurriculumVitae(): ReactElement {
   return (
-    <div className="overflow-hidden w-full min-h-screen [page:no\_margin]">
+    <div className="overflow-hidden w-full min-h-screen [page:nomargin]">
       <div className="max-w-3xl mx-auto w-full min-h-screen relative print:max-w-none">
         <Heading />
         <HeadingSpacer />
@@ -29,12 +29,12 @@ export default function CurriculumVitae(): ReactElement {
               dates="2025&ndash;present"
             >
               <ExperienceItem>
-                Created AI policy guidlines and governance for safe LLM model
+                Created AI policy guidelines and governance for safe LLM model
                 deployment
               </ExperienceItem>
               <ExperienceItem>
-                Created framework and tools for measuring and understand the
-                effacy of policy compliance
+                Created framework and tools for measuring and understanding the
+                efficacy of policy compliance
               </ExperienceItem>
             </Experience>
             <Experience
@@ -139,8 +139,7 @@ export default function CurriculumVitae(): ReactElement {
               dates="Summer 2015"
             >
               <ExperienceItem>
-                Modified auto-bidder to increase advertiser return on
-                investiment
+                Modified auto-bidder to increase advertiser return on investment
               </ExperienceItem>
               <ExperienceItem>
                 Ran live experiments to determine modification effects and
@@ -201,9 +200,9 @@ export default function CurriculumVitae(): ReactElement {
               dates="Summer 2009"
             >
               <ExperienceItem>
-                Studied the Cramér-Rao Lower Bound (CRLB), and it&apos;s
-                implications on polar coordinate tracking with both continuous
-                and discrete noise
+                Studied the Cramér-Rao Lower Bound (CRLB), and its implications
+                on polar coordinate tracking with both continuous and discrete
+                noise
               </ExperienceItem>
               <ExperienceItem>
                 Built a Matlab simulation to investigate the relation between
@@ -283,32 +282,23 @@ export default function CurriculumVitae(): ReactElement {
               authors={[
                 "M. Pavlova",
                 "E. Brinkman",
-                // eslint-disable-next-line spellcheck/spell-checker
                 "K. Iyer",
-                // eslint-disable-next-line spellcheck/spell-checker
                 "V. Albiero",
-                // eslint-disable-next-line spellcheck/spell-checker
                 "J. Bitton",
                 "H. Nguyen",
                 "J. Li",
-                // eslint-disable-next-line spellcheck/spell-checker
                 "C. Ferrer",
-                // eslint-disable-next-line spellcheck/spell-checker
                 "I. Evtimov",
-                // eslint-disable-next-line spellcheck/spell-checker
                 "A. Grattafiori",
               ]}
               url="https://arxiv.org/pdf/2410.01606"
             />
             <Publication
-              // eslint-disable-next-line spellcheck/spell-checker
               title="Gradient-based Jailbreak Images for Multimodal Fusion Models"
               authors={[
-                // eslint-disable-next-line spellcheck/spell-checker
                 "J. Rando",
                 "H. Korevaar",
                 "E. Brinkman",
-                // eslint-disable-next-line spellcheck/spell-checker
                 "I. Evtimov",
                 "F. Tramèr",
               ]}
