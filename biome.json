@@ -10,7 +10,7 @@
       "app/**/*.{ts,tsx}",
       "components/**/*.{ts,tsx}",
       "*.json",
-      "*.js}"
+      "*.js"
     ],
     "ignoreUnknown": false
   },

@@ -22,11 +22,8 @@
   },
   "include": [
     "next-env.d.ts",
-    "images.d.ts",
-    "utils/**/*.ts",
     "app/**/*.tsx",
     "components/**/*.tsx",
-    "docs/types/**/*.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
