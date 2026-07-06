@@ -1,4 +1,5 @@
-import { SiGithub, SiGooglescholar, SiLinkedin } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
+import { SiGithub, SiGooglescholar } from "react-icons/si";
 import ContactIcon from "./contact-icon";
 import Header from "./header";
 
@@ -30,7 +31,7 @@ export default function Footing({
             href="https://scholar.google.com/citations?user=4CerxXxb7KAC"
           />
           <ContactIcon
-            img={<SiLinkedin />}
+            img={<FaLinkedin />}
             footer="@erikbrinkman"
             href="https://www.linkedin.com/in/erikbrinkman/"
           />
